@@ -6,7 +6,7 @@ async function get(req, res) {
 
     const obj = id ? { _id: id} : null
 
-    const products = await ClientsModel.find(obj)
+    const clients = await ClientsModel.find(obj)
 
     res.send(clients)
 
