@@ -47,11 +47,11 @@ async function put(req, res) {
 
 }
 
-/* async function del(req, res) {
+async function del(req, res) {
 
     const { id } = req.params
 
-    const del = await ClientsModel.deleteOne({ _id: id})
+    const del = await ProductsModel.deleteOne({ _id: id})
 
     const message = del.ok ? 'Success' : 'error'
 
@@ -60,7 +60,7 @@ async function put(req, res) {
     })
 
 
-} */
+}
 
 
 
@@ -68,5 +68,5 @@ module.exports = {
     get,
     post,
     put,
-    //del,
+    del,
 }
