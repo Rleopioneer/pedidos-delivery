@@ -34,18 +34,18 @@ async function post(req, res) {
 
 }
 
-/* async function put(req, res) {
+async function put(req, res) {
 
     const { id } = req.params
 
-    const client = await ClientsModel.findOneAndUpdate({ _id: id}, req.body, { new: true })
+    const product = await ProductsModel.findOneAndUpdate({ _id: id}, req.body, { new: true })
 
     res.send({
         message:'Success',
-        client
+        product
     })
 
-} */
+}
 
 /* async function del(req, res) {
 
@@ -67,6 +67,6 @@ async function post(req, res) {
 module.exports = {
     get,
     post,
-    //put,
+    put,
     //del,
 }
