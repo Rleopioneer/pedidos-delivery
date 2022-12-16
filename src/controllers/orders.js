@@ -1,4 +1,5 @@
 const OrdersModel = require('../models/orders')
+const ClientsController = require('../controllers/clients')
 
 async function get(req, res) {
 
@@ -9,6 +10,9 @@ async function get(req, res) {
     const orders = await OrdersModel.find(obj)
 
     res.send(orders)
+    console.log(req.params)
+
+
 
 }
 /* 
