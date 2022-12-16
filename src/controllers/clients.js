@@ -12,9 +12,37 @@ async function get(req, res) {
 
 }
 
+async function post(req, res) {
+
+    const {
+        name,
+        email,
+        phone,
+        adress,
+    } = req.body
+
+    console.log(req.body)
+
+    const client = new ClientsModel({
+        name,
+        email,
+        phone,
+        adress
+    })
+
+    client.save()
+
+    res.send({
+        message: 'Success'
+    })
+
+}
+
+
+
 module.exports = {
     get,
-    //post,
+    post,
     //put,
     //delete
 }
