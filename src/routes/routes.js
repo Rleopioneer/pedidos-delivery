@@ -10,8 +10,8 @@ router.delete('/clients/:id', ClientsController.del)
 
 //Products
 router.get('/products/:id?',ProductsController.get)
-//router.post('/clients', ClientsController.post)
-//router.put('/clients/:id', ClientsController.put)
-//router.delete('/clients/:id', ClientsController.del)
+router.post('/products', ProductsController.post)
+//router.put('/clients/:id', ProductsController.put)
+//router.delete('/clients/:id', ProductsController.del)
 
 module.exports = router
