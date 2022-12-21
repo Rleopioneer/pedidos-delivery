@@ -1,5 +1,5 @@
 const OrdersModel = require('../models/orders')
-const ClientsController = require('../controllers/clients')
+
 
 async function get(req, res) {
 
@@ -10,33 +10,35 @@ async function get(req, res) {
     const orders = await OrdersModel.find(obj)
 
     res.send(orders)
-    console.log(req.params)
-
-
+    
 
 }
-/* 
+ 
 async function post(req, res) {
 
     const {
-        name,
-        price,
+        clientCode,
+        productsCode,
+        dateCreation,
+        status
     } = req.body
 
     console.log(req.body)
 
-    const product = new ProductsModel({
-        name,
-        price
+    const order = new OrdersModel({
+        clientCode,
+        productsCode,
+        dateCreation,
+        status
     })
 
-    product.save()
+    order.save()
 
     res.send({
         message: 'Success'
     })
 
-} */
+}
 /* 
 async function put(req, res) {
 
@@ -70,7 +72,7 @@ async function del(req, res) {
 
 module.exports = {
     get,
-    //post,
+    post,
     //put,
     //del,
 }
